@@ -1,0 +1,7 @@
+<svg class="mark" viewBox="0 0 64 64" role="img" aria-hidden="true">
+        <rect width="64" height="64" rx="13" fill="#12171D"/>
+        <rect x="11" y="15" width="21" height="14" rx="2.5" fill="#2F5FBF"/>
+        <rect x="37" y="15" width="4" height="14" rx="1.5" fill="#F2F5F8"/>
+        <rect x="44" y="15" width="4" height="14" rx="1.5" fill="#F2F5F8"/>
+        <rect x="11" y="36" width="42" height="11" rx="2.5" fill="#F2F5F8"/>
+      </svg>

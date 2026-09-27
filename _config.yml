@@ -1,0 +1,31 @@
+title: RELRO Security
+tagline: Automotive-grade security for autonomous robots
+description: >-
+  A team of automotive cybersecurity engineers applying ten years of
+  safety-critical practice to autonomous robots.
+location: Sofia, Bulgaria
+url: "https://relro.security"
+baseurl: ""
+
+nav:
+  - name: What transfers
+    url: /#review
+  - name: Services
+    url: /#work
+  - name: Writing
+    url: /writing/
+  - name: The team
+    url: /#about
+
+permalink: /writing/:title/
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+
+exclude:
+  - README.md

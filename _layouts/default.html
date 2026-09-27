@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en"{% if page.still_background %} data-bg="still"{% endif %}>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{% if page.title %}{{ page.title }} — {{ site.title }}{% else %}{{ site.title }} — {{ site.tagline }}{% endif %}</title>
+<meta name="description" content="{{ page.description | default: site.description }}">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='13' fill='%2312171D'/%3E%3Crect x='11' y='15' width='21' height='14' rx='2.5' fill='%232F5FBF'/%3E%3Crect x='37' y='15' width='4' height='14' rx='1.5' fill='%23F2F5F8'/%3E%3Crect x='44' y='15' width='4' height='14' rx='1.5' fill='%23F2F5F8'/%3E%3Crect x='11' y='36' width='42' height='11' rx='2.5' fill='%23F2F5F8'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+</head>
+<body>
+
+<canvas id="bgTree" aria-hidden="true"></canvas>
+<div id="bgVeil" aria-hidden="true"></div>
+
+<div class="topbar">
+<header class="nav">
+  <div class="wrap nav__inner">
+    <a class="logo" href="{{ '/' | relative_url }}" aria-label="RELRO Security, home">
+      {% include logo.svg %}
+      <span>
+        <span class="logo__name">RELRO</span>
+        <span class="logo__sub" style="display:block">Security</span>
+      </span>
+    </a>
+    <nav class="nav__links" aria-label="Main">
+      {% for item in site.nav %}<a href="{{ item.url | relative_url }}">{{ item.name }}</a>{% endfor %}
+    </nav>
+    <a class="btn" href="{{ '/#contact' | relative_url }}">Book a review</a>
+  </div>
+</header>
+</div>
+
+{{ content }}
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__top">
+      <a class="logo" href="{{ '/' | relative_url }}" aria-label="RELRO Security, home">
+        {% include logo.svg %}
+        <span>
+          <span class="logo__name">RELRO</span>
+          <span class="logo__sub" style="display:block">Security</span>
+        </span>
+      </a>
+      <a class="btn btn--ghost" href="{{ '/#contact' | relative_url }}">Book a review</a>
+    </div>
+    <p class="foot__note"><b>RELRO — RELocation Read-Only.</b> The linker flag that makes the global offset table read-only once startup is done. A small, unglamorous mitigation that removes an entire class of attack and costs almost nothing. That is the standard we build to.</p>
+    <p class="foot__legal">© {{ site.time | date: "%Y" }} {{ site.title }} · {{ site.location }}</p>
+  </div>
+</footer>
+
+<script src="{{ '/assets/js/tree.js' | relative_url }}"></script>
+</body>
+</html>

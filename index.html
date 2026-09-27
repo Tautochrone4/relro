@@ -1,0 +1,157 @@
+---
+layout: default
+---
+<main id="top">
+
+<!-- HERO -->
+<section class="wrap hero">
+  <p class="eyebrow">Automotive-grade security for autonomous robots</p>
+  <h1 style="margin-top:22px">Robots are vehicles with a different body. We have secured the vehicles.</h1>
+  <p class="lede">We are a team of engineers with a decade each in automotive cybersecurity, on machines built in volume and kept safe in the field for years afterwards. Autonomous robots have the same attack surface and the same consequences. We bring the playbook, without the ten years it took to write it.</p>
+  <div class="hero__cta">
+    <a class="btn" href="#contact">Book a security review</a>
+    <a class="btn btn--ghost" href="#review">What transfers</a>
+  </div>
+</section>
+
+<!-- WHAT TRANSFERS -->
+<section class="band" id="review">
+  <div class="wrap">
+    <p class="eyebrow rv">What transfers</p>
+    <h2 class="rv" style="margin-top:18px;max-width:24ch">Most of it transfers. The parts that do not are the interesting ones.</h2>
+    <p class="lede rv" style="margin-top:22px;max-width:60ch">Automotive spent a decade working this out the hard way, one production programme at a time. A robot is a vehicle with a different body and a shorter history — so the honest answer is that four fifths of the work is already solved, and the remaining fifth is where the real engineering sits.</p>
+
+    <div class="grid6" style="margin-top:44px">
+      <div class="item"><h3>TARA → robot threat analysis</h3><p>Threat analysis and risk assessment the way ISO 21434 does it: damage scenarios first, controls last. Same method, different machine.</p></div>
+      <div class="item"><h3>R155 CSMS → your security process</h3><p>Who decides, who reviews, and what evidence exists when someone asks. We have built these from nothing and kept them running.</p></div>
+      <div class="item"><h3>R156 SUMS → fleet update</h3><p>Signed, atomic, anti-rollback updates over the air to machines you cannot physically reach, with the records to prove which unit runs what.</p></div>
+      <div class="item"><h3>Secure boot → unchanged</h3><p>Fuses, key hierarchies, verified boot and signing infrastructure behave the same on a Jetson as on an ECU. This part is a straight port.</p></div>
+      <div class="item"><h3>AUTOSAR IDS → ROS 2 and DDS</h3><p>Here it diverges. Automotive buses are fixed and knowable; ROS 2 discovery is open and dynamic by default. The detection idea carries over, the implementation does not.</p></div>
+      <div class="item"><h3>Teleoperation → new ground</h3><p>Cars do not hand a remote operator the controls. Robots do. This is the part nobody has a decade of practice in, including us.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- COVERAGE -->
+<section class="band band--paper" id="update">
+  <div class="wrap">
+    <p class="eyebrow rv">Coverage</p>
+    <h2 class="rv" style="margin-top:18px;max-width:22ch">Seven layers. An attacker needs one.</h2>
+    <p class="lede rv" style="margin-top:22px;max-width:60ch">Most robotics teams secure the cloud and the app, then ship a compute module that boots anything on the SD card and a middleware that trusts every node on the subnet. We work across the whole machine, because that is where the gap always is.</p>
+
+    <div class="grid6" style="margin-top:44px">
+      <div class="item"><h3>Silicon and boot</h3><p>Fuses, secure boot, key storage, debug ports left open on production units.</p></div>
+      <div class="item"><h3>Operating system</h3><p>Verified root filesystem, kernel hardening, mandatory access control, and what the vendor BSP quietly left enabled.</p></div>
+      <div class="item"><h3>Middleware</h3><p>ROS 2 and DDS: node authentication, encrypted topics, access control, and what happens when discovery is open to the whole subnet.</p></div>
+      <div class="item"><h3>Autonomy and perception</h3><p>Sensor and map integrity, model provenance, and how the planner behaves when its inputs are wrong rather than missing.</p></div>
+      <div class="item"><h3>Connectivity and teleop</h3><p>Remote access paths, session authentication, the intervention channel, and the failure mode when the link drops mid-manoeuvre.</p></div>
+      <div class="item"><h3>Fleet and back office</h3><p>Per-robot identity, certificate lifecycle, update distribution, and who in the organisation can move a machine and from where.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="band band--paper" id="work">
+  <div class="wrap">
+    <p class="eyebrow rv">Services</p>
+    <h2 class="rv" style="margin-top:18px;max-width:24ch">Assess, build, operate. Take one or all three.</h2>
+    <p class="lede rv" style="margin-top:22px;max-width:58ch">Most engagements start with a fixed-price assessment and stop there if that is all you need. Nothing here requires you to adopt our tooling or lock a platform to us.</p>
+
+    <div class="services">
+      <article class="svc">
+        <span class="svc__step">ASSESS</span>
+        <h3>Find out where you stand</h3>
+        <p class="svc__meta">2–4 weeks · fixed scope · fixed price</p>
+        <p class="svc__body">Threat analysis and risk assessment for the whole machine, run the way ISO 21434 does it. Firmware and image review, ROS 2 and DDS configuration review, remote access and teleoperation paths, fleet identity and key handling. You get a written report with a prioritised plan and effort estimates — and, if you need it, the same findings mapped to the Machinery Regulation, the CRA or IEC 62443.</p>
+        <p class="svc__price">from €12,000</p>
+      </article>
+
+      <article class="svc">
+        <span class="svc__step">BUILD</span>
+        <h3>Close the gaps</h3>
+        <p class="svc__meta">2–6 months · scoped per platform</p>
+        <p class="svc__body">Secure boot and chain of trust to the application layer. Verified root filesystem and atomic update with anti-rollback. ROS 2 security enclaves, DDS authentication and access control. Per-robot identity, provisioning on the production line, certificate lifecycle. Hardened teleoperation with a defined behaviour when the link fails. Your engineers are trained as we go.</p>
+        <p class="svc__price">from €60,000</p>
+      </article>
+
+      <article class="svc">
+        <span class="svc__step">OPERATE</span>
+        <h3>Keep it true for eight years</h3>
+        <p class="svc__meta">per platform · 3-year terms</p>
+        <p class="svc__body">CVE monitoring across your BSP and ROS 2 distribution, backported patches, a maintained SBOM that matches the shipped image, key and certificate rotation, incident support, and a technical file that stays current. The support period outlives the project team — this is the part that has to survive it.</p>
+        <p class="svc__price">from €3,500 / month</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- STACK -->
+<section class="band" id="stack">
+  <div class="wrap">
+    <p class="eyebrow rv">Working stack</p>
+    <h2 class="rv" style="margin-top:18px;max-width:24ch">We build on what is already maintained.</h2>
+    <p class="lede rv" style="margin-top:22px;max-width:60ch">ROS 2 security, RAUC, SWUpdate and the Yocto security layers are mature, free and well maintained. There is no reason to replace them and no reason to lock you into anything of ours. The work is in how they are configured, connected and keyed — which is where machines actually fail.</p>
+
+    <div class="stack">
+      <span class="chip">ROS 2</span><span class="chip">SROS 2</span><span class="chip">Fast DDS</span>
+      <span class="chip">Cyclone DDS</span><span class="chip">Zenoh</span><span class="chip">micro-ROS</span>
+      <span class="chip">PX4</span><span class="chip">Autoware</span><span class="chip">AUTOSAR</span>
+      <span class="chip">Yocto</span><span class="chip">U-Boot</span><span class="chip">OP-TEE</span>
+      <span class="chip">RAUC</span><span class="chip">dm-verity</span><span class="chip">TPM 2.0</span>
+      <span class="chip">PKCS#11</span><span class="chip">ISO 21434</span><span class="chip">UNECE R155</span>
+      <span class="chip">IEC 62443</span><span class="chip">Jetson Orin</span><span class="chip">i.MX 8</span>
+    </div>
+  </div>
+</section>
+
+<!-- WHY ROBOTS ARE HARDER -->
+<section class="band band--paper" id="fleet-sec">
+  <div class="wrap">
+    <p class="eyebrow rv">Why robots are harder</p>
+    <h2 class="rv" style="margin-top:18px;max-width:20ch">The blast radius is physical.</h2>
+    <p class="lede rv" style="margin-top:22px;max-width:60ch">In most products a breach costs data. In a robot it costs a person. Cars taught us that, and robots make it worse: they operate beside people without a cabin, a driver or a homologated route.</p>
+
+    <div class="grid6" style="margin-top:44px">
+      <div class="item"><h3>Safety and security are one analysis</h3><p>A performance level or SIL argument that assumes only random failure is incomplete once the control path is reachable over a network. The two assessments have to be run against each other, not filed separately.</p></div>
+      <div class="item"><h3>Availability is a safety property</h3><p>On a server you fail closed. A robot that halts mid-path can block a fire exit or drop a load. Every mitigation has to be checked against what the machine does while it is applied.</p></div>
+      <div class="item"><h3>The human override is a target</h3><p>The supervisory channel is, by design, a remote way to make a machine move. It deserves more protection than anything else in the system and usually has less.</p></div>
+    </div>
+
+    <p class="lede rv" style="margin-top:40px;max-width:58ch">We work with autonomous mobile robots in warehouses and hospitals, automated guided vehicles on factory floors, agricultural and construction machines, inspection and delivery drones, and teleoperated equipment of any kind.</p>
+  </div>
+</section>
+
+<!-- TEAM -->
+<section class="band" id="about">
+  <div class="wrap about">
+    <div>
+      <p class="eyebrow rv">The team</p>
+      <h2 class="rv" style="margin-top:18px;max-width:22ch">Specialists. Ten years each. All of it shipped.</h2>
+      <p class="lede rv" style="margin-top:24px">RELRO Security is a team of embedded security engineers based in Sofia. Every one of us has spent more than a decade inside automotive cybersecurity at tier-1 suppliers, on programmes that reached series production for European and Japanese manufacturers.</p>
+      <p class="lede rv">Between us we have covered every layer of a connected machine: silicon and boot, the operating system, the networks it speaks on, the way it is updated, and the infrastructure behind it. Not one specialism each — the whole thing, repeatedly, under deadline.</p>
+      <p class="lede rv">None of it was a prototype. These were machines that left the factory in volume, ran for years in places nobody could reach, and had to be updated safely long after the original team had moved on. That is the experience we bring to robots.</p>
+    </div>
+    <div class="facts">
+      <div><div class="fact__k">10+ years</div><div class="fact__v">Each, in automotive cybersecurity — not adjacent to it, inside it</div></div>
+      <div><div class="fact__k">Series production</div><div class="fact__v">Programmes that shipped in volume and stayed supported for years afterwards</div></div>
+      <div><div class="fact__k">Whole machine</div><div class="fact__v">Silicon, OS, middleware, autonomy, connectivity, fleet — not one layer of it</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="band band--paper" id="contact">
+  <div class="wrap contact">
+    <div>
+      <p class="eyebrow rv">Start here</p>
+      <h2 class="rv" style="margin-top:18px">Tell us what your robot does. We will tell you what breaks.</h2>
+      <p class="lede rv" style="margin-top:22px;max-width:46ch">A short technical call first — no slides. You talk to the engineers who would do the work. If an assessment makes sense, it starts within three weeks.</p>
+    </div>
+    <div>
+      <a class="contact__mail" href="mailto:contact@relro.security">contact@relro.security</a>
+      <p class="contact__meta">Sofia, Bulgaria · working across the EU<br>Response within one business day</p>
+    </div>
+  </div>
+</section>
+
+</main>
